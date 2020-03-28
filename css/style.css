@@ -24,6 +24,7 @@
         font-size: 62.5%;
         height: 100vh;
         width: 100vw;
+        scroll-behavior: smooth;
     }
 
     body{
@@ -102,6 +103,10 @@ body{
 }
 
 .backgroundXp h1{
+  position: fixed;
+}
+
+.backgroundXp h1{
   color: var(--couleur-noir);
   animation: apparitionH1 0.5s ease;
 }
@@ -170,13 +175,8 @@ body{
 }
 
 .button {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%,-50%);
   background-color: transparent;
   border: solid 2px;
-  color: white;
   padding: 15px 32px;
   margin-top: 25px;
   text-align: center;
@@ -186,13 +186,29 @@ body{
   transition: 0.3s;
 }
 
+.backgroundIndex .button{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+}
+
+.contentJauges .button{
+  position: relative;
+  color: var(--couleur-noir);
+}
+
 .button:hover{
   background-color: rgba(255, 255, 255, 0.3);
 }
 
 .backgroundXp p{
+  position: fixed;
+}
+
+p{
   width: 45%;
-  position: absolute;
   font-size: 1.9rem;
   font-weight: 300;
   top: 58%;
@@ -222,6 +238,29 @@ span{
   font-style: italic;
 }
 
+.fa-angle-down{
+    z-index: 3;
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--couleur-noir);
+    text-align: center;
+    font-size: 4rem;
+    animation: move 1s ease-in-out infinite;
+}
+  
+@keyframes move {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+  
+    50% {
+      transform: translateY(15px);
+    }
+}
+
 
 
 
@@ -231,251 +270,245 @@ span{
 
 /* JAUGES */
 
-#fondNoir{
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
-    color: #343434;
+
+
+/* FICHE BLANCHE */
+  
+#whiteBackground{
+  z-index: 100;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding: 100px 200px 100px 200px;
 }
 
 h2{
-    font-family: 'Passion One', cursive;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-    font-size: 6rem;
-    padding: 0 5rem 2rem 5rem;
+  font-family: 'recoletabold';
+  color: var(--couleur-noir);
+  text-align: center;
+  font-size: 6rem;
+  padding: 0 5rem 2rem 5rem;
 }
 
-i{
-    font-size: 5.5rem;
-    color: #E7E7E7;
-    margin: 0 0.7rem 0 0.7rem;
-    -webkit-transition: all ease 250ms;
-    -moz-transition: all ease 250ms;
-    -o-transition: all ease 250ms;
-    transition: all ease 250ms;
-    cursor: pointer;
+#whiteBackground p{
+  position: relative;
+  padding: 0;
 }
 
-i:after{
-    background-color: green;
+.contentJauges{
+  position: relative;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.jauges2{
+  position: relative;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-top: 75px;
 }
 
 
-  .input-range {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 45%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 
-  .input-range #range-slider { /* BARRE SOUS LES ICONES */
-    width: calc(100% - 19%);
-    order: 10;
-    margin: 0;
-    border: none;
-    background-color: #202020;
-    margin-top: 2vw;
-    border-radius: 2vw;
-    height: 0.8vw;
-  }
 
-  @media screen and (max-width: 768px) {
-    .input-range #range-slider {
-      margin-top: 4vw;
-    }
-  }
+/* CODE JULIEN JAUGES */
 
-  .input-range #range-slider .ui-slider-range {
-    background-color: #bad6ef;
-    border-radius: 2vw;
-    -webkit-transition: all ease 250ms;
-    -moz-transition: all ease 250ms;
-    -o-transition: all ease 250ms;
-    transition: all ease 250ms;
-    cursor: pointer;
-    height: 0.8vw;
-  }
+ul{
+  list-style: none;
+  padding-bottom: 5px;
+}
 
-  .input-range #range-slider .ui-slider-handle {
-    background-color: #bad6ef;
-    border: none;
-    width: 1.5vw;
-    height: 1.5vw;
-    border-radius: 20px;
-    transform: translateY(-50%);
-    top: 50%;
-    margin-left: -0.75vw;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    outline: none;
-    -webkit-transition: all ease 250ms;
-    -moz-transition: all ease 250ms;
-    -o-transition: all ease 250ms;
-    transition: all ease 250ms;
-    cursor: pointer;
-  }
+.slider{
+  display: inline-block;
+  position: relative;
+  height: 12rem;
+}
 
-  .input-range #range-slider[data-value="1"] .ui-slider-range,
-  .input-range #range-slider[data-value="1"] .ui-slider-handle {
-    background-color: rgb(255, 199, 0.1);
-  }
+.slider h2{
+  text-transform: capitalize;
+}
 
-  .input-range #range-slider[data-value="2"] .ui-slider-range,
-  .input-range #range-slider[data-value="2"] .ui-slider-handle {
-    background-color: rgb(255, 199, 0.2);
-  }
+.pointList{
+  margin: 0;
+  width: 30rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
 
-  .input-range #range-slider[data-value="3"] .ui-slider-range,
-  .input-range #range-slider[data-value="3"] .ui-slider-handle {
-    background-color: rgb(255, 199, 0.3);
-  }
+.pointList li{
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+}
 
-  .input-range #range-slider[data-value="4"] .ui-slider-range,
-  .input-range #range-slider[data-value="4"] .ui-slider-handle {
-    background-color: rgb(255, 199, 0.4);
-  }
+.pointList li::before, .pointList li::after{
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  position: absolute;
+}
 
-  .input-range #range-slider[data-value="5"] .ui-slider-range,
-  .input-range #range-slider[data-value="5"] .ui-slider-handle {
-    background-color: rgb(255, 199, 0.5);
-  }
+.pointList li::before, .pointList li::after{
+  content: '';
+  display: block;
+}
 
-  .input-range #range-slider[data-value="6"] .ui-slider-range,
-  .input-range #range-slider[data-value="6"] .ui-slider-handle {
-    background-color: rgb(255, 199, 0.6);
-  }
+.pointList li.active::before{
+  background-color: red;
+  transition: all .3s;
+}
 
-  .input-range #range-slider[data-value="7"] .ui-slider-range,
-  .input-range #range-slider[data-value="7"] .ui-slider-handle {
-    background-color: rgb(255, 199, 0.7);
-  }
+#joy .pointList li.active::before{
+  background-color: #F3CA30;
+}
 
-  .input-range #range-slider[data-value="8"] .ui-slider-range,
-  .input-range #range-slider[data-value="8"] .ui-slider-handle {
-    background-color: rgb(255, 199, 0.8);
-  }
+#excitation .pointList li.active::before{
+  background-color: #FFEB00;
+}
 
-  .input-range #range-slider[data-value="9"] .ui-slider-range,
-  .input-range #range-slider[data-value="9"] .ui-slider-handle {
-    background-color: rgb(255, 199, 0.9);
-  }
+#fun .pointList li.active::before{
+  background-color: #FF7600;
+}
 
-  .input-range #range-slider[data-value="10"] .ui-slider-range,
-  .input-range #range-slider[data-value="10"] .ui-slider-handle {
-    background-color: rgb(255, 199, 1);
-  }
+#anger .pointList li.active::before{
+  background-color: #D60000;
+}
 
-  .input-range .labels {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
+#desire .pointList li.active::before{
+  background-color: #D90074;
+}
 
-  /* i {
-    width: calc(100% / 10);
-    font-size: 5.5rem;
-    text-align: center;
-    cursor: pointer;
-    color: #f1f1f1;
-    -webkit-transition: all ease 250ms;
-    -moz-transition: all ease 250ms;
-    -o-transition: all ease 250ms;
-    transition: all ease 250ms;
-  }
+#uncomfortable .pointList li.active::before{
+  background-color: #7C0056;
+}
 
-  i:before {
-    font-size: 4vw;
-  }*/
+#boredom .pointList li.active::before{
+  background-color: #BBB5FF;
+}
 
-  i:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-  }
+#serenity .pointList li.active::before{
+  background-color: #ADE3FF;
+}
 
-  .input-range .labels .fas {
-    width: calc(100% / 6);
-    text-align: center;
-    cursor: pointer;
-    color: #f1f1f1;
-    -webkit-transition: all ease 250ms;
-    -moz-transition: all ease 250ms;
-    -o-transition: all ease 250ms;
-    transition: all ease 250ms;
-  }
+#nostalgia .pointList li.active::before{
+  background-color: #538FFF;
+}
 
-  .input-range .labels .fas:before {
-    font-size: 4vw;
-  }
+#fear .pointList li.active::before{
+  background-color: #0070AA;
+}
 
-  .input-range .labels .fas:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-  }
+#anxiety .pointList li.active::before{
+  background-color: #009298;
+}
 
-  .input-range .labels[data-value="1"] .fas:nth-child(-n + 1) {
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
+#sadness .pointList li.active::before{
+  background-color: #0007B1;
+}
 
-  .input-range .labels[data-value="2"] .fas:nth-child(-n + 2) {
-    color: #fffbec;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
+#satisfaction .pointList li.active::before{
+  background-color: #ACE000;
+}
 
-  .input-range .labels[data-value="3"] .fas:nth-child(-n + 3) {
-    color: #fff5d2;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
+#disgust .pointList li.active::before{
+  background-color: #516F00;
+}
 
-  .input-range .labels[data-value="4"] .fas:nth-child(-n + 4) {
-    color: #ffeeb2;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
+.pointList li::before{
+  z-index: 1;
+}
 
-  .input-range .labels[data-value="5"] .fas:nth-child(-n + 5) {
-    color: #ffe790;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
+.pointList li::after{
+  background-color: black;
+  z-index: 0;
+}
 
-  .input-range .labels[data-value="6"] .fas:nth-child(-n + 6) {
-    color: #ffdf6c;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
+.range{
+  position: relative;
+}
 
-  .input-range .labels[data-value="7"] .fas:nth-child(-n + 7) {
-    color: #ffd749;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
+.range li{
+  border-radius: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1rem;
+  width: 100%;
+  background-color: black;
+}
 
-  .input-range .labels[data-value="8"] .fas:nth-child(-n + 8) {
-    color: #ffd02b;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
+.range .emotionRange{
+  z-index: 1;
+  width: 0%;
+  transition: all .3s;
+}
 
-  .input-range .labels[data-value="9"] .fas:nth-child(-n + 9) {
-    color: #ffcb11;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
+#joy .range .emotionRange{
+  background-color: #F3CA30
+}
 
-  .input-range .labels[data-value="10"] .fas:nth-child(-n + 10) {
-    color: #ffc701;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
+#excitation .range .emotionRange{
+  background-color: #FFEB00;
+}
+
+#fun .range .emotionRange{
+  background-color: #FF7600;
+}
+
+#anger .range .emotionRange{
+  background-color: #D60000;
+}
+
+#desire .range .emotionRange{
+  background-color: #D90074;
+}
+
+#uncomfortable .range .emotionRange{
+  background-color: #7C0056;
+}
+
+#boredom .range .emotionRange{
+  background-color: #BBB5FF;
+}
+
+#serenity .range .emotionRange{
+  background-color: #ADE3FF;
+}
+
+#nostalgia .range .emotionRange{
+  background-color: #538FFF;
+}
+
+#fear .range .emotionRange{
+  background-color: #0070AA;
+}
+
+#anxiety .range .emotionRange{
+  background-color: #009298;
+}
+
+#sadness .range .emotionRange{
+  background-color: #0007B1;
+}
+
+#satisfaction .range .emotionRange{
+  background-color: #ACE000;
+}
+
+#disgust .range .emotionRange{
+  background-color: #516F00;
+}
+
+.contentJauges h2{
+  padding: 0;
+  margin-bottom: 7px;
+  font-size: 3rem;
+}
