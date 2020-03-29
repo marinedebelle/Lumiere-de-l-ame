@@ -148,4 +148,4 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('#disgust .emotionRange')
       );
   //
-})
+});

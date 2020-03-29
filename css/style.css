@@ -513,9 +513,19 @@ ul{
   font-size: 3rem;
 }
 
+
+
+
+
+
 /* Resultats */
 .backgroundResults {
   background-color: white;
+  overflow: hidden;
+}
+
+.backgroundResults img {
+  animation: emotions 1s ease-in-out forwards;
 }
 
 #joyImg{
