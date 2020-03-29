@@ -73,14 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
       getFeelingValue(
       document.querySelector('#anger h2'), 
-      'colère',
+      'colere',
       document.querySelectorAll('#anger li'), 
       document.querySelector('#anger .emotionRange')
       );
 
       getFeelingValue(
         document.querySelector('#desire h2'), 
-        'désir',
+        'desir',
         document.querySelectorAll('#desire li'), 
         document.querySelector('#desire .emotionRange')
       );
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       getFeelingValue(
         document.querySelector('#serenity h2'), 
-        'sérénité',
+        'serenite',
         document.querySelectorAll('#serenity li'), 
         document.querySelector('#serenity .emotionRange')
       );
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       getFeelingValue(
         document.querySelector('#anxiety h2'), 
-        'anxiété',
+        'anxiete',
         document.querySelectorAll('#anxiety li'), 
         document.querySelector('#anxiety .emotionRange')
       );
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       getFeelingValue(
         document.querySelector('#disgust h2'), 
-        'dégoût',
+        'degout',
         document.querySelectorAll('#disgust li'), 
         document.querySelector('#disgust .emotionRange')
       );
