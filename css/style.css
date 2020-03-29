@@ -530,98 +530,35 @@ ul{
 
 #joyImg{
   position: absolute;
-  top: -40%;
-  left: -45%;
+  top: -30%;
+  left: -35%;
   height: 100%;
   width: 100%;
   z-index: 110;
 }
 
-#excitationImg{
+#uncomfortableImg{
   position: absolute;
-  top: 10%;
-  left: 15%;
+  top: -30%;
+  left: -17%;
   height: 100%;
   width: 100%;
-  z-index: 120;
+  z-index: 40;
 }
 
 #funImg{
   position: absolute;
-  top: -43%;
+  top: -33%;
   left: 0%;
   height: 100%;
   width: 100%;
   z-index: 100;
 }
 
-#angerImg{
-  position: absolute;
-  top: 50%;
-  left: 45%;
-  height: 100%;
-  width: 100%;
-  z-index: 30;
-}
-
-#desireImg{
-  position: absolute;
-  top: 10%;
-  left: -13%;
-  height: 100%;
-  width: 100%;
-  z-index: 50;
-}
-
-#uncomfortableImg{
-  position: absolute;
-  top: -50%;
-  left: -27%;
-  height: 100%;
-  width: 100%;
-  z-index: 40;
-}
-
-#boredomImg{
-  position: absolute;
-  top: 4%;
-  left: -28%;
-  height: 100%;
-  width: 100%;
-  z-index: 40;
-}
-
-#serenityImg{
-  position: absolute;
-  top: -10%;
-  left: 10%;
-  height: 100%;
-  width: 100%;
-  z-index: 100;
-}
-
-#nostalgiaImg{
-  position: absolute;
-  top: 35%;
-  left: -42%;
-  height: 100%;
-  width: 100%;
-  z-index: 40;
-}
-
-#fearImg{
-  position: absolute;
-  top: 35%;
-  left: 20%;
-  height: 100%;
-  width: 100%;
-  z-index: 30;
-}
-
 #anxietyImg{
   position: absolute;
-  top: -40%;
-  left: 35%;
+  top: -30%;
+  left: 23%;
   height: 100%;
   width: 100%;
   z-index: 80;
@@ -629,27 +566,101 @@ ul{
 
 #sadnessImg{
   position: absolute;
-  top: -15%;
-  left: 50%;
+  top: -8%;
+  left: 20%;
   height: 100%;
   width: 100%;
   z-index: 80;
 }
 
-#satisfactionImg{
+#serenityImg{
   position: absolute;
-  top: 2%;
-  left: 50%;
+  top: -3%;
+  left: 0%;
   height: 100%;
   width: 100%;
-  z-index: 80;
+  z-index: 100;
+}
+
+#desireImg{
+  position: absolute;
+  top: 0%;
+  left: -13%;
+  height: 100%;
+  width: 100%;
+  z-index: 50;
+}
+
+#boredomImg{
+  position: absolute;
+  top: 0%;
+  left: -25%;
+  height: 100%;
+  width: 100%;
+  z-index: 40;
+}
+
+#nostalgiaImg{
+  position: absolute;
+  top: 25%;
+  left: -30%;
+  height: 100%;
+  width: 100%;
+  z-index: 40;
 }
 
 #disgustImg{
   position: absolute;
-  top: 45%;
-  left: -20%;
+  top: 20%;
+  left: -18%;
   height: 100%;
   width: 100%;
   z-index: 30;
 }
+
+#excitationImg{
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  height: 100%;
+  width: 100%;
+  z-index: 120;
+}
+
+#fearImg{
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  height: 100%;
+  width: 100%;
+  z-index: 30;
+}
+
+#satisfactionImg{
+  position: absolute;
+  top: 5%;
+  left: 30%;
+  height: 100%;
+  width: 100%;
+  z-index: 80;
+}
+
+#angerImg{
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  height: 100%;
+  width: 100%;
+  z-index: 30;
+}
+
+
+
+
+
+
+
+
+
+
+
